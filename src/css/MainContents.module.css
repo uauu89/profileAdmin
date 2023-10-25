@@ -1,0 +1,14 @@
+.wrap{
+    padding: 100px 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}

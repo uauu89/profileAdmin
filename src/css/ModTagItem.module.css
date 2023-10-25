@@ -1,0 +1,61 @@
+.rows{
+    display: grid;
+    grid-template-columns: 150px repeat(4, max-content);
+    column-gap: 40px;
+}
+
+
+.tagDemo{
+    justify-self: center;
+    align-self: center;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #fff;
+    padding: 5px;
+}
+
+
+
+.inputStyle{
+    height: 32px;
+    text-indent: 10px;
+    border: 1px solid var(--color_main);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+
+.inputName{
+    grid-column: 2;
+}
+.inputColorGroup{
+    grid-column: 3;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.inputPicker{
+    height: 32px;
+    border-radius: 5px;
+    border: none;
+}
+.inputColOrder{
+    grid-column: 4;
+}
+
+.btnDel{
+    grid-column: 5;
+    display: block;
+    width: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--color_main);
+}

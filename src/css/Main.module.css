@@ -1,0 +1,35 @@
+.wrap{
+    display: grid;
+    height: 100%;
+    grid-template-rows: min-content auto;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb{
+    font-size: 24px;
+    height: 32px;
+    display: flex;
+    gap: 40px;
+}
+
+
+.btn_logOut{
+    color: #fff;
+    background-color: var(--color_main);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.active{
+    font-weight: 700;
+    color: var(--color_main);
+}

@@ -1,0 +1,130 @@
+.wrap{
+    background-color: var(--color_gray);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 128px repeat(2,  auto) 244px 200px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img title date link btn" "img tag tag link btn";
+    gap: 30px;
+}
+
+.hover{
+    background-color: #EFEFEF;
+}
+
+.title{
+    grid-area: title;
+    font-size: 24px;
+    font-weight: 700;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.date{
+    grid-area: date;
+    font-size: 16px;
+    line-height: 20px;
+    align-self: flex-end;
+}
+
+
+.imgFrameWrap{
+    grid-area: img;
+    position: relative;
+    width: 132px;
+    height: 83px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.imgFrame{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.imgFrameWrap img{
+    position: relative;
+    width: 112px;
+    height: 63px;
+    margin: 10px;
+    z-index: 1;
+}
+
+
+
+
+.tagWrap{
+    grid-area: tag;
+    display: flex;
+    gap: 10px;
+
+}
+.tagStyle{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+
+.linkWrap{
+    grid-area: link;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.linkWrap > li{
+    color: var(--color_textLink);
+    position: relative;
+}
+.linkWrap > li::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color_textLink);
+    bottom: -3px;
+}
+
+
+.btnWrap{
+    grid-area: btn;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.btnStyle{
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.btnStyle svg{
+    width: 20px;
+}
+
+.btnMod{
+    color: #fff;
+    background-color: var(--color_main);
+}
+.btnDel{
+    background-color: #D9D9D9;
+}
+
