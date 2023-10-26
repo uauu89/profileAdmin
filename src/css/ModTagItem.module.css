@@ -3,8 +3,6 @@
     grid-template-columns: 150px repeat(4, max-content);
     column-gap: 40px;
 }
-
-
 .tagDemo{
     justify-self: center;
     align-self: center;
@@ -16,9 +14,6 @@
     color: #fff;
     padding: 5px;
 }
-
-
-
 .inputStyle{
     height: 32px;
     text-indent: 10px;
@@ -26,10 +21,6 @@
     border-radius: 5px;
     box-sizing: border-box;
 }
-
-
-
-
 .inputName{
     grid-column: 2;
 }
@@ -39,7 +30,6 @@
     gap: 5px;
     align-items: center;
 }
-
 .inputPicker{
     height: 32px;
     border-radius: 5px;

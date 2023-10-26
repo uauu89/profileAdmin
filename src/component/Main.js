@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-// import cookie from 'react-cookies';
+import { HashRouter } from "react-router-dom";
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 import ModTagPage from './ModTagPage';
 import ModPortfolioPage from './ModPortfolioPage';
@@ -48,7 +48,7 @@ export default class Main extends Component{
     render(){
         return(
             <div className={styles.wrap}>
-                <BrowserRouter>
+                <HashRouter>
                     <header className={styles.header}>
                         <h1 className="hidden">프로필사이트 관리페이지</h1>
                         <nav>
@@ -124,7 +124,7 @@ export default class Main extends Component{
                             }>
                         </Route>
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         )
     }

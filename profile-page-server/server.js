@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.port || 8000;
 
 const cors = require("cors");
+
 const corsOption = {
     origin : "http://uauu.dothome.co.kr",
     credential : true,

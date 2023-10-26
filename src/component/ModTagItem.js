@@ -23,9 +23,15 @@ export default class ModTagItem extends Component{
     componentDidUpdate(prevProps, prevState){
         if(prevState !== this.state){
             this.props.updateTag(this.state);
+        }else if(JSON.stringify(prevProps) !== JSON.stringify(this.props)){
+            this.setState({
+                idx : this.props.data.idx,
+                name : this.props.data.name,
+                color : this.props.data.color,
+                colOrder : this.props.data.colOrder,
+            })
         }
     }
-
 
     render(){
         return(
@@ -45,7 +51,7 @@ export default class ModTagItem extends Component{
                 <input type="text" name="name" placeholder="언어명"
                     id={"name_"+this.props.data.name}
                     className={`${styles.inputStyle} ${styles.inputName}`}
-                    defaultValue={this.state.name}
+                    value={this.state.name}
                     onChange={e=>this.setState({name : e.currentTarget.value})}
                 >
                 </input>
@@ -53,14 +59,14 @@ export default class ModTagItem extends Component{
                     <input type="text" name="color" placeholder="#000000"
                         id={"color_"+this.props.data.name}
                         className={`${styles.inputStyle} ${styles.inputColor}`}
-                        defaultValue={this.state.color}
+                        value={this.state.color}
                         onChange={e=>this.changeColor(e.currentTarget.value)}
                     >
                     </input>
                     <input type="color" name="colorPicker" tabIndex="-1"
                         id={"colorPicker_"+this.props.data.name}
                         className={styles.inputPicker}
-                        defaultValue={this.state.color}
+                        value={this.state.color}
                         onChange={e=>this.changeColorPicker(e.currentTarget.value)}
                     >
                     </input>
@@ -68,7 +74,7 @@ export default class ModTagItem extends Component{
                 <input type="number" name="colOrder" placeholder="0"
                     id={"colOrder_"+this.props.data.name}
                     className={`${styles.inputStyle} ${styles.inputColOrder}`}
-                    defaultValue={this.state.colOrder}
+                    value={this.state.colOrder}
                     onChange={(e)=>this.setState({colOrder : e.currentTarget.value})}
                 >
                 </input>

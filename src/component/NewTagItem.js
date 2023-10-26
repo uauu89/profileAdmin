@@ -19,13 +19,11 @@ export default class NewTagItem extends Component{
         document.querySelector("#color_"+this.props.data.idx).value = value;
         this.setState({color : value});
     }
-
     componentDidUpdate(prevProps, prevState){
         if(prevState !== this.state){
             this.props.insertNewTag(this.state);
         }
     }
-       
     render(){
         return(
             <div className={styles.rows} data-type="insert">

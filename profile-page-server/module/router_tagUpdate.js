@@ -34,7 +34,6 @@ router.post("/", (req, res)=>{
                 result.forEach( i => {
                     let skillArray = i.skill;
                     if(count_mod){
-                        console.log("mod loop")
                         req.body.mod.forEach((i, idx)=>{
                             let modName = i.name;
                             let original = req.body.original[idx].name
